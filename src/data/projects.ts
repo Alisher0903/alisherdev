@@ -193,8 +193,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     name: "Snake game",
     favicon: "/images/projects/logos/stockpredictor.ico",
     imageUrl: [
-      "/images/projects/sferacard1.webp",
-      "/images/projects/sferacard2.webp",
+      "/images/projects/snake.png",
     ],
     description:
       "Snake Game is a classic snake game built with React.js for desktop browsers. It features smooth movement, collision detection, and score tracking — all implemented using component-based logic and React state management.",
