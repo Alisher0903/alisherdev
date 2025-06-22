@@ -52,6 +52,7 @@ export default function Navbar(props: NavbarProps) {
                 >
                   <Link
                     href={_link.href}
+                    target={_link.href === '/resume.pdf' ? "_blank" : "_self"}
                     className={classNames(
                       pathName === _link.href
                         ? "font-semibold text-background dark:hover:text-foreground"

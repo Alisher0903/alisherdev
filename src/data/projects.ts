@@ -52,7 +52,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
 export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "Sfera IT Solution",
-    favicon: "/images/projects/logos/jsontree.ico",
+    favicon: "/images/projects/logos/solution.png",
     imageUrl: [
       "/images/projects/sfera-solution.webp",
       "/images/projects/sferacard1.webp",
@@ -67,7 +67,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Geodeziya",
-    favicon: "/images/projects/logos/kanban.ico",
+    favicon: "/images/projects/logos/geodezist.webp",
     imageUrl: [
       "/images/projects/geodezistdark.webp",
       "/images/projects/geodezistlight.webp",
@@ -81,7 +81,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Bookers",
-    favicon: "/images/projects/logos/manygames.ico",
+    favicon: "/images/projects/logos/bookers.png",
     imageUrl: [
       "/images/projects/bookerslight.webp",
       "/images/projects/bookersdark.webp",
@@ -98,7 +98,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Sfera Academy",
-    favicon: "/favicon.ico",
+    favicon: "/images/projects/logos/sfera.ico",
     imageUrl: [
       "/images/projects/sferacard1.webp",
       "/images/projects/sferacard2.webp",
@@ -110,7 +110,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Sfera Academy | Admin",
-    favicon: "/images/projects/logos/covidtracker.ico",
+    favicon: "/images/projects/logos/sfera.ico",
     imageUrl: [
       "/images/projects/sferacard1.webp",
       "/images/projects/sferacard2.webp",
@@ -122,11 +122,14 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Edu platform",
-    favicon: "/images/projects/logos/stockpredictor.ico",
+    favicon: "/images/projects/logos/sfera.ico",
     imageUrl: [
       "/images/projects/sferaedu1.png",
       "/images/projects/sferaedu2.png",
       "/images/projects/sferaedu3.png",
+      "/images/projects/sferaedu4.png",
+      "/images/projects/sferaedu5.png",
+      "/images/projects/sferaedu6.png",
     ],
     description:
       "Platform courses are delivered by experienced instructors and combine theoretical knowledge with practical projects. Students benefit from real-world assignments, mentorship, and career support, including assistance with job placement. Graduates receive official certificates upon successful completion.",
@@ -135,7 +138,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Tunikafon",
-    favicon: "/images/projects/logos/stockpredictor.ico",
+    favicon: "/images/projects/logos/tunika.ico",
     imageUrl: ["/images/projects/tunikafon.png"],
     description:
       "Tunikafon is an admin panel developed to streamline operations in the industry. It helps manage employee tasks, calculate workloads, and track material usage efficiently through a centralized dashboard.",
@@ -144,8 +147,11 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Qr Pay",
-    favicon: "/images/projects/logos/stockpredictor.ico",
-    imageUrl: ["/images/projects/qrpay.png", "/images/projects/qrpay2.png"],
+    favicon: "/images/projects/logos/qrpay.png",
+    imageUrl: [
+      "/images/projects/qrpay.png",
+      "/images/projects/qrpay2.png"
+    ],
     description:
       "QRPay — A QR code-based payment system with a landing page (qrpay.uz) and an admin panel (my.qrpay.uz) for managing transactions.",
     sourceCodeHref: "https://github.com/Alisher0903/cross-pay-web",
@@ -153,7 +159,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Railway",
-    favicon: "/images/projects/logos/stockpredictor.ico",
+    favicon: "/images/projects/logos/railway.png",
     imageUrl: [
       "/images/projects/railway1.png",
       "/images/projects/railway2.png",
@@ -166,7 +172,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "GSR Logistic",
-    favicon: "/images/projects/logos/stockpredictor.ico",
+    favicon: "/images/projects/logos/logistic.png",
     imageUrl: [
       "/images/projects/gsrlogistic1.png",
       "/images/projects/gsrlogistic2.png",
@@ -179,10 +185,11 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Sfera Academy | Old",
-    favicon: "/images/projects/logos/stockpredictor.ico",
+    favicon: "/images/projects/logos/sfera.ico",
     imageUrl: [
-      "/images/projects/sferacard1.webp",
-      "/images/projects/sferacard2.webp",
+      "/images/projects/sfera-old.png",
+      "/images/projects/sfera-old1.png",
+      "/images/projects/sfera-old2.png",
     ],
     description:
       "SFERA ACADEMY is a website thatprovides complete information about sfera academy, it is a site that providesinformation about courses such asbusiness training, programming courses frontend and backend, computer literacy, systemization.",
@@ -191,10 +198,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   },
   {
     name: "Snake game",
-    favicon: "/images/projects/logos/stockpredictor.ico",
-    imageUrl: [
-      "/images/projects/snake.png",
-    ],
+    favicon: "/images/projects/logos/snake.png",
+    imageUrl: ["/images/projects/snake.png"],
     description:
       "Snake Game is a classic snake game built with React.js for desktop browsers. It features smooth movement, collision detection, and score tracking — all implemented using component-based logic and React state management.",
     sourceCodeHref: "https://github.com/Alisher0903/snake-game",
