@@ -148,10 +148,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "Qr Pay",
     favicon: "/images/projects/logos/qrpay.png",
-    imageUrl: [
-      "/images/projects/qrpay.png",
-      "/images/projects/qrpay2.png"
-    ],
+    imageUrl: ["/images/projects/qrpay.png", "/images/projects/qrpay2.png"],
     description:
       "QRPay — A QR code-based payment system with a landing page (qrpay.uz) and an admin panel (my.qrpay.uz) for managing transactions.",
     sourceCodeHref: "https://github.com/Alisher0903/cross-pay-web",
