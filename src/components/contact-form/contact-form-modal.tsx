@@ -1,4 +1,4 @@
-import { Dispatch, Fragment, SetStateAction, useState } from "react";
+import { Dispatch, Fragment, SetStateAction, useEffect, useState } from "react";
 
 import { Dialog, Transition } from "@headlessui/react";
 import { MailIcon, XIcon } from "lucide-react";
@@ -9,6 +9,8 @@ import ContactForm, {
 import ContactMailToast, {
   type MailSentToastState,
 } from "@/components/contact-form/contact-mail-toast";
+
+import emailjs from "emailjs-com";
 
 export interface ContactFormModelProps {
   showModal: boolean;
@@ -25,16 +27,26 @@ export default function ContactFormModal({
     value: false,
     message: "",
   });
+  const serviceId = "service_2u82mx5";
+  const templateId = "template_4t0jhw1";
+  const userId = "bYjumgKvea_9_8s6R";
+
+  useEffect(() => {
+    emailjs.init(userId);
+  }, []);
 
   const handleSubmit = async (values: ContactFormValues) => {
     setIsSendingMail(true);
     try {
-      const response = await fetch("/api/sendmail", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(values),
-      });
-      if (response.ok) {
+      const response = await emailjs.send(
+        serviceId,
+        templateId,
+        values,
+        userId,
+      );
+      console.log(response.text);
+
+      if (response.text === "OK") {
         setToastState({
           type: "success",
           value: true,
@@ -43,23 +55,22 @@ export default function ContactFormModal({
         setShowModal(false);
       } else {
         setToastState({
-          type: response.status === 429 ? "warning" : "failure",
+          type: "warning",
           value: true,
-          message:
-            response.status === 429
-              ? "Rate Limiter: Only 5 email per hour"
-              : "Oop! Unable to send email",
+          message: "Oop! Unable to send email",
         });
       }
-    } catch {
+    } catch (error) {
       setToastState({
         type: "failure",
         value: true,
         message: "Oop! Unable to send email",
       });
+    } finally {
+      setIsSendingMail(false);
     }
-    setIsSendingMail(false);
   };
+
   return (
     <>
       <Transition show={showModal} as={Fragment}>
