@@ -26,24 +26,9 @@ If you have any improvements, ideas or find any bugs, don't hesitate to submit a
 
 There are some premade themes that I have made for this portfolio inside `theme-examples.css` file. Just copy paste the styles to `globals.css` after that you are good to go or Create your own theme by editing the css variables in `globals.css`
 
-### Note
-
-1. When creating custom theme the css variables only take hsl value seperated by space
-2. Theme color for Animated Logo have to be hard coded.
-
-### Create Nodemailer User and Password
-
-1. Go to your Google Mail app or any other Google App.
-2. Click on your `Profile`
-3. Click on `Manage your Google Account`
-4. Go to `Security`
-5. Under `How you sign in Google` go to `2-Step Verification`
-6. Under `2-Step Verification` go to `App passwords`
-7. Create an app (e.g., portfolio-nodemailer), and copy the generated password securely. Use it as the value for the `NODEMAILER_PASS` variable and your email as the value for `NODEMAILER_USER` variable in `.env` file. [Note: Passwords are not visible once closed; if forgotten, delete the old app and create a new one.]
-
 ### ✨ Seo
 
-1. The project automatically generates sitemap.xml and robots.txt files within the public folder by leveraging the project's file structure. This process is initiated through the scripts located at src/scripts/generateSitemap.mjs, executed either after the project is built or by running the command `pnpm sitemap`.
+1. The project automatically generates sitemap.xml and robots.txt files within the public folder by leveraging the project's file structure. This process is initiated through the scripts located at src/scripts/generateSitemap.mjs, executed either after the project is built or by running the command `npm sitemap`.
 2. It's important to note that [dynamic routes](https://nextjs.org/docs/pages/building-your-application/routing/dynamic-routes), identified by file or folder names in square brackets (e.g., [segmentName], [id], or [slug]), are excluded from the sitemap.xml.
 3. Update google site verification code with your own inside `/src/data/siteMetaData.mjs`. Can be created for free using your google email id at <https://search.google.com/search-console/welcome>
 
@@ -52,13 +37,13 @@ There are some premade themes that I have made for this portfolio inside `theme-
 ### Step 1 - Install dependencies
 
 ```bash
-pnpm install
+npm install
 ```
 
 ### Step 2 - Run the development server
 
 ```bash
-pnpm dev
+npm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the portfolio.
