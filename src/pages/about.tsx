@@ -2,9 +2,11 @@ import { NextSeo } from "next-seo";
 
 import AboutHero from "@/components/about-hero";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
+import StructuredData from "@/components/seo/structured-data";
 import { EXPERIENCE } from "@/data/experience";
 import { EDUCATION } from "@/data/education";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { aboutPageSchema } from "@/utils/structured-data";
 
 export default function About() {
   return (
@@ -32,12 +34,21 @@ export default function About() {
         }}
         additionalMetaTags={[
           {
-            property: "keywords",
+            name: "keywords",
             content:
-              "Software Developer portfolio, Software Developer, React Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Professional Journey, Skills, Passion for Web Development",
+              "Alisher Sodiqov About, Software Developer portfolio, Software Developer, React Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Professional Journey, Skills, Passion for Web Development, Experience, Education",
+          },
+          {
+            name: "author",
+            content: siteMetadata.author,
+          },
+          {
+            name: "robots",
+            content: "index, follow",
           },
         ]}
       />
+      <StructuredData data={aboutPageSchema} />
       <AboutHero />
       <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
       <ExperienceShowcaseList title="Education" details={EDUCATION} />

@@ -41,6 +41,8 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       {
         name: "HTML",
         icon: HtmlSvg,
+        level: "Expert" as const,
+        description: "Semantic HTML5 markup and accessibility best practices",
       },
       {
         name: "PUG",
@@ -49,6 +51,8 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       {
         name: "CSS",
         icon: CsssSvg,
+        level: "Expert" as const,
+        description: "Modern CSS3, Flexbox, Grid, and responsive design",
       },
       {
         name: "SCSS / SASS",
@@ -57,6 +61,8 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       {
         name: "Tailwind CSS",
         icon: TailwindcssSvg,
+        level: "Expert" as const,
+        description: "Utility-first CSS framework with custom configurations",
       },
       {
         name: "Bootstrap",
@@ -112,10 +118,14 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       {
         name: "Javascript",
         icon: JavascriptSvg,
+        level: "Expert" as const,
+        description: "ES6+, Async/Await, DOM manipulation, and modern JS features",
       },
       {
         name: "Typescript",
         icon: TypescriptSvg,
+        level: "Advanced" as const,
+        description: "Type-safe development with interfaces, generics, and advanced types",
       },
     ],
   },
@@ -125,10 +135,14 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
       {
         name: "React.js",
         icon: ReactjsSvg,
+        level: "Expert" as const,
+        description: "Hooks, Context API, Performance optimization, and component patterns",
       },
       {
         name: "Next.js",
         icon: SiNextdotjs,
+        level: "Advanced" as const,
+        description: "SSR, SSG, API Routes, and performance optimization",
       },
       {
         name: "Solid.js",

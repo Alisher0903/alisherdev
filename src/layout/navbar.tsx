@@ -42,25 +42,34 @@ export default function Navbar(props: NavbarProps) {
             <AnimatedLogo />
           </div>
         </Link>
-        <nav className="hidden items-center gap-2 rounded-full px-2 py-2 shadow-md ring-1 ring-zinc-200 backdrop-blur-md dark:ring-accent/50 md:flex">
-          <ul className="flex gap-2 text-sm font-medium">
+        <nav
+          className="hidden items-center gap-2 rounded-full px-2 py-2 shadow-md ring-1 ring-zinc-200 backdrop-blur-md dark:ring-accent/50 md:flex"
+          aria-label="Main navigation"
+        >
+          <ul className="flex gap-2 text-sm font-medium" role="list">
             {props.routes.map((_link, index) => {
+              const isActive = pathName === _link.href;
+              const isExternalLink = _link.href === "/resume.pdf";
+
               return (
                 <li
                   key={index}
                   className="my-3 transition-transform duration-100 hover:scale-[1.1]"
+                  role="listitem"
                 >
                   <Link
                     href={_link.href}
-                    target={_link.href === "/resume.pdf" ? "_blank" : "_self"}
+                    target={isExternalLink ? "_blank" : "_self"}
+                    rel={isExternalLink ? "noopener noreferrer" : undefined}
+                    aria-current={isActive ? "page" : undefined}
                     className={classNames(
-                      pathName === _link.href
+                      isActive
                         ? "font-semibold text-background dark:hover:text-foreground"
                         : "text-foreground",
                       "group relative mx-3 rounded-full px-3 py-2 transition-colors duration-200",
                     )}
                   >
-                    {_link.href === pathName && (
+                    {isActive && (
                       <motion.span
                         layoutId="tab-pill"
                         animate={{
@@ -76,12 +85,17 @@ export default function Navbar(props: NavbarProps) {
                       ></motion.span>
                     )}
                     {_link.title}
+                    {isExternalLink && (
+                      <span className="sr-only"> (opens in new tab)</span>
+                    )}
                   </Link>
                 </li>
               );
             })}
           </ul>
-          <ThemeSwitch />
+          <div className="flex items-center gap-2">
+            <ThemeSwitch />
+          </div>
         </nav>
         <AnimatePresence>
           <MenuLogo open={isModalOpen} toggle={toggleModal} />

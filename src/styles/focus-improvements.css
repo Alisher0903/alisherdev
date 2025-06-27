@@ -1,0 +1,98 @@
+/* Custom focus styles for better UI */
+
+/* Remove default focus outline and add custom styles */
+* {
+  @apply focus:outline-none;
+}
+
+/* Button focus styles */
+button:focus-visible,
+[role="button"]:focus-visible {
+  @apply ring-2 ring-accent/30 ring-offset-2 ring-offset-background;
+  @apply transition-shadow duration-200;
+}
+
+/* Link focus styles */
+a:focus-visible {
+  @apply ring-2 ring-accent/30 ring-offset-1 ring-offset-background;
+  @apply transition-shadow duration-200;
+}
+
+/* Input focus styles */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  @apply ring-2 ring-accent/40 ring-offset-1 ring-offset-background;
+  @apply border-accent/50;
+  @apply transition-all duration-200;
+}
+
+/* Navigation focus styles */
+nav a:focus-visible {
+  @apply ring-2 ring-accent/20 ring-offset-2 ring-offset-background;
+  @apply rounded-lg;
+  @apply transition-shadow duration-200;
+}
+
+/* Menu button focus styles */
+.menu-button:focus-visible {
+  @apply ring-2 ring-accent/25 ring-offset-2 ring-offset-background;
+  @apply transition-shadow duration-200;
+}
+
+/* Language switcher focus styles */
+.language-switcher button:focus-visible {
+  @apply ring-2 ring-accent/20 ring-offset-2 ring-offset-background;
+  @apply transition-shadow duration-200;
+}
+
+/* Theme switch focus styles */
+.theme-switch:focus-visible {
+  @apply ring-2 ring-accent/25 ring-offset-2 ring-offset-background;
+  @apply transition-shadow duration-200;
+}
+
+/* Card focus styles */
+.project-card:focus-visible {
+  @apply ring-2 ring-accent/30 ring-offset-4 ring-offset-background;
+  @apply transition-shadow duration-300;
+}
+
+/* Skip navigation focus styles */
+.skip-nav:focus-visible {
+  @apply ring-2 ring-white ring-offset-2 ring-offset-accent;
+  @apply transition-shadow duration-200;
+}
+
+/* Modal and dialog focus styles */
+[role="dialog"]:focus-visible {
+  @apply ring-2 ring-accent/20 ring-offset-2 ring-offset-background;
+  @apply transition-shadow duration-200;
+}
+
+/* Custom focus for interactive elements */
+.interactive-element:focus-visible {
+  @apply ring-2 ring-accent/25 ring-offset-2 ring-offset-background;
+  @apply transition-shadow duration-200;
+  @apply transform scale-[1.02];
+}
+
+/* Reduce motion for focus animations */
+@media (prefers-reduced-motion: reduce) {
+  *:focus-visible {
+    @apply transition-none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  *:focus-visible {
+    @apply ring-4 ring-accent ring-offset-4;
+  }
+}
+
+/* Focus within styles for containers */
+.focus-within-container:focus-within {
+  @apply ring-1 ring-accent/20 ring-offset-1 ring-offset-background;
+  @apply transition-shadow duration-200;
+}

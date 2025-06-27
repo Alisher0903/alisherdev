@@ -15,6 +15,15 @@ async function generateSitemap() {
     "!src/pages/404.tsx",
   ]);
 
+  // Define page priorities and change frequencies
+  const pageConfig = {
+    '/': { priority: '1.0', changefreq: 'weekly' },
+    '/about': { priority: '0.8', changefreq: 'monthly' },
+    '/projects': { priority: '0.9', changefreq: 'monthly' },
+  };
+
+  const currentDate = new Date().toISOString().split('T')[0];
+
   const sitemap = `
     <?xml version="1.0" encoding="UTF-8"?>
         <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -30,8 +39,17 @@ async function generateSitemap() {
                   return "";
                 }
 
+                const normalizedPath = path === "" ? "/" : path;
+                const config = pageConfig[normalizedPath] || { 
+                  priority: '0.6', 
+                  changefreq: 'monthly' 
+                };
+
                 return `<url>
                             <loc>${siteMetadata.siteUrl}${path}</loc>
+                            <lastmod>${currentDate}</lastmod>
+                            <changefreq>${config.changefreq}</changefreq>
+                            <priority>${config.priority}</priority>
                         </url>
                     `;
               })
@@ -39,7 +57,7 @@ async function generateSitemap() {
         </urlset>
   `;
 
-  const formatted = prettier.format(sitemap, {
+  const formatted = await prettier.format(sitemap, {
     ...prettierConfig,
     parser: "html",
   });
@@ -54,6 +72,25 @@ async function generateSitemap() {
 
 const robotsTxt = `User-agent: *
 Allow: /
-Sitemap: ${siteMetadata.siteUrl}/sitemap.xml`;
+
+# Block crawling of API routes
+Disallow: /api/
+
+# Block crawling of private files
+Disallow: /_next/
+Disallow: /static/
+
+# Allow specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: ${siteMetadata.siteUrl}/sitemap.xml
+
+# Crawl delay (in seconds)
+Crawl-delay: 1`;
 
 generateSitemap();

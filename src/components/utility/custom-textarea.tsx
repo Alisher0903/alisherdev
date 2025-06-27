@@ -1,9 +1,9 @@
-import { InputHTMLAttributes, forwardRef } from "react";
+import { TextareaHTMLAttributes, forwardRef } from "react";
 
 import { classNames } from "@/utility/classNames";
 
 export interface TextareaProps
-  extends InputHTMLAttributes<HTMLTextAreaElement> {}
+  extends TextareaHTMLAttributes<HTMLTextAreaElement> {}
 
 const CustomTextarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => {
@@ -12,7 +12,7 @@ const CustomTextarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         ref={ref}
         {...props}
         className={classNames(
-          "w-full rounded-lg border-none bg-background font-semibold text-accent placeholder:font-normal placeholder:text-zinc-400 focus-within:border-2 focus-within:border-accent focus-within:ring-accent",
+          "resize-vertical w-full rounded-lg border-2 border-transparent bg-background font-semibold text-accent placeholder:font-normal placeholder:text-zinc-400 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/50 focus:ring-offset-2 focus:ring-offset-accent",
           className,
         )}
       />

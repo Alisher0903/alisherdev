@@ -1,8 +1,10 @@
 import { NextSeo } from "next-seo";
 
 import ProjectCard from "@/components/projects/project-card";
+import StructuredData from "@/components/seo/structured-data";
 import { PROJECTS_CARD } from "@/data/projects";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { projectsPageSchema } from "@/utils/structured-data";
 
 export default function Projects() {
   return (
@@ -30,15 +32,24 @@ export default function Projects() {
         }}
         additionalMetaTags={[
           {
-            property: "keywords",
+            name: "keywords",
             content:
-              "Projects,Amit Portfolio, Software Developer, React Developer, Frontend Developer, Web Development, JavaScript, HTML, CSS, UI/UX, Web Applications, Responsive Design",
+              "Alisher Sodiqov Projects, Portfolio Projects, Software Developer, React Developer, Frontend Developer, Web Development, JavaScript, HTML, CSS, UI/UX, Web Applications, Responsive Design, Next.js Projects",
+          },
+          {
+            name: "author",
+            content: siteMetadata.author,
+          },
+          {
+            name: "robots",
+            content: "index, follow",
           },
         ]}
       />
+      <StructuredData data={projectsPageSchema} />
       <section className="mx-auto mb-40 mt-6 w-full gap-20 px-6 sm:mt-12 sm:px-14 md:px-20">
         <div className="mx-auto max-w-7xl">
-          <h1 className="text-2xl font-semibold text-foreground md:text-4xl">
+          <h1 className="font-heading text-2xl font-bold text-foreground md:text-4xl">
             Projects
           </h1>
           <div className="my-2">
@@ -52,11 +63,11 @@ export default function Projects() {
             ))}
           </div>
           <div className="mx-auto mt-16 max-w-5xl text-center text-foreground md:mt-28">
-            <span className="text-xl font-bold md:text-2xl">
+            <span className="font-heading text-xl font-bold md:text-2xl">
               I am currently building new projects and learning backend
               development to expand my skill set beyond frontend.
             </span>
-            <p className="mt-10 text-base md:text-xl">
+            <p className="mt-10 text-base md:text-xl font-normal">
               Visit my github to see some of the latest projects{" "}
               <a
                 href={`${siteMetadata.github}?tab=repositories`}

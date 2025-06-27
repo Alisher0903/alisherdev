@@ -5,9 +5,15 @@ import { NextSeo } from "next-seo";
 import LandingHero from "@/components/landing-hero";
 import SkillsShowcase from "@/components/skills/skills-showcase";
 import ProjectShowcase from "@/components/projects/project-showcase";
+import StructuredData from "@/components/seo/structured-data";
 import { PROJECT_SHOWCASE } from "@/data/projects";
 import { SKILLS_DATA } from "@/data/skills";
 import { siteMetadata } from "@/data/siteMetaData.mjs";
+import {
+  portfolioPageSchema,
+  professionalServiceSchema,
+  faqSchema,
+} from "@/utils/structured-data";
 
 export default function Home() {
   return (
@@ -35,9 +41,25 @@ export default function Home() {
         }}
         additionalMetaTags={[
           {
-            property: "keywords",
+            name: "keywords",
             content:
-              "React Developer, Software Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Portfolio, UI/UX, React.js, Frontend Development, Web Development, JavaScript Developer, Responsive Design",
+              "Alisher Sodiqov, Software Developer, React Developer, Frontend Developer, Next.js Developer, TypeScript Developer, Web Developer, JavaScript, HTML, CSS, Portfolio, UI/UX, React.js, Frontend Development, Web Development, JavaScript Developer, Responsive Design, Uzbekistan Developer",
+          },
+          {
+            name: "author",
+            content: siteMetadata.author,
+          },
+          {
+            name: "robots",
+            content: "index, follow",
+          },
+          {
+            name: "language",
+            content: "English",
+          },
+          {
+            name: "revisit-after",
+            content: "7 days",
           },
         ]}
       />
@@ -49,6 +71,9 @@ export default function Home() {
           />
         )}
       </Head>
+      <StructuredData
+        data={[portfolioPageSchema, professionalServiceSchema, faqSchema]}
+      />
       <LandingHero />
       <SkillsShowcase skills={SKILLS_DATA} />
       <ProjectShowcase projects={PROJECT_SHOWCASE} />

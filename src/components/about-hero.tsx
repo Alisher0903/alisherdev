@@ -30,12 +30,12 @@ export default function AboutHero() {
       <div className="sm:1/2 mt-10 w-full lg:w-1/2">
         <AnimatePresence>
           <FadeUp key="title-greeting" duration={0.6}>
-            <h1 className="text-6xl font-bold text-accent sm:text-7xl md:text-6xl lg:text-5xl xl:text-7xl">
+            <h1 className="font-heading text-6xl font-bold text-accent sm:text-7xl md:text-6xl lg:text-5xl xl:text-7xl">
               Hi, I&apos;m Alisher Sodiqov
             </h1>
           </FadeUp>
           <FadeUp key="description-1" duration={0.6} delay={0.2}>
-            <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
+            <p className="mt-8 text-base font-normal text-zinc-700 dark:text-zinc-300 sm:text-lg md:text-lg leading-relaxed">
               I’m a frontend developer turning ideas into engaging digital
               experiences. Skilled in React.js, Next.js, JavaScript, and
               TypeScript, I create responsive designs using tools like Tailwind
@@ -44,7 +44,7 @@ export default function AboutHero() {
             </p>
           </FadeUp>
           <FadeUp key="description-2" duration={0.6} delay={0.4}>
-            <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
+            <p className="mt-8 text-base font-normal text-zinc-700 dark:text-zinc-300 sm:text-lg md:text-lg leading-relaxed">
               Explore my latest{" "}
               <Link href="/projects" className="underline underline-offset-4">
                 <span className="text-accent">projects</span>

@@ -7,8 +7,8 @@ import { AnimatePresence } from "framer-motion";
 
 import MainLayout from "@/layout/main-layout";
 import CursorTrailCanvas from "@/components/cursor-trail-canvas";
-import "@/styles/globals.css";
 import ProgressLayout from "@/layout/progress-layout";
+import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();

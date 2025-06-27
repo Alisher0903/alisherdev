@@ -20,17 +20,19 @@ export default function FadeRight({
   const animation = {
     opacity: 1,
     x: 0,
-    transition: {
-      duration,
-      ease: "easeInOut",
-      delay,
-    },
+  };
+
+  const transitionConfig = {
+    duration,
+    ease: "easeOut" as const,
+    delay,
   };
   return (
     <motion.div
       initial={{ x: -100, opacity: 0 }}
       whileInView={whileInView ? animation : undefined}
       animate={!whileInView ? animation : undefined}
+      transition={transitionConfig}
       className={className}
     >
       {children}
