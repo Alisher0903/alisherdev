@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* Import custom focus styles */
-@import './focus-improvements.css';
+@import "./focus-improvements.css";
 
 @layer base {
   :root {

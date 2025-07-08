@@ -67,7 +67,10 @@ export default function LandingHero() {
                   Developer Introduction
                 </h2>
                 <p className="mt-8 max-w-3xl text-base font-normal text-zinc-700 dark:text-zinc-300 sm:text-base md:text-xl leading-relaxed">
-                  I&apos;m a frontend developer passionate about creating beautiful and functional web applications. I specialize in React, Next.js, and modern web technologies to build engaging user experiences.
+                  I&apos;m a frontend developer passionate about creating
+                  beautiful and functional web applications. I specialize in
+                  React, Next.js, and modern web technologies to build engaging
+                  user experiences.
                 </p>
               </section>
             </FadeUp>

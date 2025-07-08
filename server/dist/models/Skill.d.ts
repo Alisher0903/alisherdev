@@ -1,4 +1,4 @@
-import { Document } from 'mongoose';
+import mongoose, { Document } from 'mongoose';
 export interface ISkill extends Document {
     name: string;
     icon: string;
@@ -8,6 +8,10 @@ export interface ISkill extends Document {
     createdAt: Date;
     updatedAt: Date;
 }
-declare const _default: any;
+declare const _default: mongoose.Model<ISkill, {}, {}, {}, mongoose.Document<unknown, {}, ISkill, {}> & ISkill & Required<{
+    _id: unknown;
+}> & {
+    __v: number;
+}, any>;
 export default _default;
 //# sourceMappingURL=Skill.d.ts.map

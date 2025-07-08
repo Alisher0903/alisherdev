@@ -40,7 +40,7 @@ export const FloatingParticles: React.FC<{
     });
 
     return () => {
-      particles.forEach(particle => {
+      particles.forEach((particle) => {
         gsap.killTweensOf(particle);
         if (particle.parentNode) {
           particle.parentNode.removeChild(particle);
@@ -49,7 +49,12 @@ export const FloatingParticles: React.FC<{
     };
   }, [count]);
 
-  return <div ref={containerRef} className={`absolute inset-0 overflow-hidden -z-10 ${className}`} />;
+  return (
+    <div
+      ref={containerRef}
+      className={`absolute inset-0 overflow-hidden -z-10 ${className}`}
+    />
+  );
 };
 
 // Glowing orbs that follow mouse
@@ -82,12 +87,12 @@ export const InteractiveOrbs: React.FC<{
     const handleMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
       const { innerWidth, innerHeight } = window;
-      
+
       orbs.forEach((orb, index) => {
         const speed = 0.1 + index * 0.05;
         const x = (clientX / innerWidth) * 100;
         const y = (clientY / innerHeight) * 100;
-        
+
         gsap.to(orb, {
           left: `${x + index * 10}%`,
           top: `${y + index * 15}%`,
@@ -101,7 +106,7 @@ export const InteractiveOrbs: React.FC<{
 
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
-      orbs.forEach(orb => {
+      orbs.forEach((orb) => {
         gsap.killTweensOf(orb);
         if (orb.parentNode) {
           orb.parentNode.removeChild(orb);
@@ -110,7 +115,12 @@ export const InteractiveOrbs: React.FC<{
     };
   }, []);
 
-  return <div ref={containerRef} className={`absolute inset-0 overflow-hidden -z-10 ${className}`} />;
+  return (
+    <div
+      ref={containerRef}
+      className={`absolute inset-0 overflow-hidden -z-10 ${className}`}
+    />
+  );
 };
 
 // Animated gradient background
@@ -125,17 +135,20 @@ export const AnimatedGradient: React.FC<{
     const tl = gsap.timeline({ repeat: -1 });
 
     tl.to(gradientRef.current, {
-      background: "radial-gradient(ellipse at 20% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 40% 80%, rgba(120, 255, 198, 0.1) 0%, transparent 50%)",
+      background:
+        "radial-gradient(ellipse at 20% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(255, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 40% 80%, rgba(120, 255, 198, 0.1) 0%, transparent 50%)",
       duration: 8,
       ease: "none",
     })
       .to(gradientRef.current, {
-        background: "radial-gradient(ellipse at 60% 30%, rgba(255, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(120, 255, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 80% 60%, rgba(120, 119, 198, 0.1) 0%, transparent 50%)",
+        background:
+          "radial-gradient(ellipse at 60% 30%, rgba(255, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(120, 255, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 80% 60%, rgba(120, 119, 198, 0.1) 0%, transparent 50%)",
         duration: 8,
         ease: "none",
       })
       .to(gradientRef.current, {
-        background: "radial-gradient(ellipse at 80% 70%, rgba(120, 255, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 40% 20%, rgba(120, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 20% 50%, rgba(255, 119, 198, 0.1) 0%, transparent 50%)",
+        background:
+          "radial-gradient(ellipse at 80% 70%, rgba(120, 255, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 40% 20%, rgba(120, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 20% 50%, rgba(255, 119, 198, 0.1) 0%, transparent 50%)",
         duration: 8,
         ease: "none",
       });
@@ -150,7 +163,8 @@ export const AnimatedGradient: React.FC<{
       ref={gradientRef}
       className={`absolute inset-0 -z-10 ${className}`}
       style={{
-        background: "radial-gradient(ellipse at 50% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(255, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(120, 255, 198, 0.1) 0%, transparent 50%)",
+        background:
+          "radial-gradient(ellipse at 50% 50%, rgba(120, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(255, 119, 198, 0.1) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(120, 255, 198, 0.1) 0%, transparent 50%)",
       }}
     />
   );
@@ -170,14 +184,19 @@ export const AnimatedShapes: React.FC<{
 
     const shapeConfigs = [
       { size: "w-8 h-8", shape: "rounded-full", color: "bg-accent/10" },
-      { size: "w-6 h-6", shape: "rounded-none rotate-45", color: "bg-blue-500/10" },
+      {
+        size: "w-6 h-6",
+        shape: "rounded-none rotate-45",
+        color: "bg-blue-500/10",
+      },
       { size: "w-10 h-4", shape: "rounded-full", color: "bg-green-500/10" },
       { size: "w-4 h-10", shape: "rounded-sm", color: "bg-purple-500/10" },
     ];
 
     // Create shapes
     for (let i = 0; i < 15; i++) {
-      const config = shapeConfigs[Math.floor(Math.random() * shapeConfigs.length)];
+      const config =
+        shapeConfigs[Math.floor(Math.random() * shapeConfigs.length)];
       const shape = document.createElement("div");
       shape.className = `absolute ${config.size} ${config.shape} ${config.color}`;
       shape.style.left = `${Math.random() * 100}%`;
@@ -189,7 +208,7 @@ export const AnimatedShapes: React.FC<{
     // Animate shapes
     shapes.forEach((shape, index) => {
       const tl = gsap.timeline({ repeat: -1, delay: index * 0.2 });
-      
+
       tl.to(shape, {
         x: Math.random() * 200 - 100,
         y: Math.random() * 200 - 100,
@@ -197,19 +216,18 @@ export const AnimatedShapes: React.FC<{
         scale: Math.random() * 1.5 + 0.5,
         duration: Math.random() * 15 + 10,
         ease: "none",
-      })
-        .to(shape, {
-          x: Math.random() * 200 - 100,
-          y: Math.random() * 200 - 100,
-          rotation: Math.random() * 360,
-          scale: Math.random() * 1.5 + 0.5,
-          duration: Math.random() * 15 + 10,
-          ease: "none",
-        });
+      }).to(shape, {
+        x: Math.random() * 200 - 100,
+        y: Math.random() * 200 - 100,
+        rotation: Math.random() * 360,
+        scale: Math.random() * 1.5 + 0.5,
+        duration: Math.random() * 15 + 10,
+        ease: "none",
+      });
     });
 
     return () => {
-      shapes.forEach(shape => {
+      shapes.forEach((shape) => {
         gsap.killTweensOf(shape);
         if (shape.parentNode) {
           shape.parentNode.removeChild(shape);
@@ -218,7 +236,12 @@ export const AnimatedShapes: React.FC<{
     };
   }, []);
 
-  return <div ref={containerRef} className={`absolute inset-0 overflow-hidden -z-10 ${className}`} />;
+  return (
+    <div
+      ref={containerRef}
+      className={`absolute inset-0 overflow-hidden -z-10 ${className}`}
+    />
+  );
 };
 
 // Combined creative background

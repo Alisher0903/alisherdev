@@ -65,7 +65,7 @@ export default function Tooltip({
 
   const getPositionClasses = () => {
     const baseClasses = "absolute z-50 whitespace-nowrap";
-    
+
     switch (actualPosition) {
       case "top":
         return `${baseClasses} bottom-full left-1/2 -translate-x-1/2 mb-2`;
@@ -81,8 +81,9 @@ export default function Tooltip({
   };
 
   const getArrowClasses = () => {
-    const baseClasses = "absolute w-2 h-2 bg-zinc-800 dark:bg-zinc-200 transform rotate-45";
-    
+    const baseClasses =
+      "absolute w-2 h-2 bg-zinc-800 dark:bg-zinc-200 transform rotate-45";
+
     switch (actualPosition) {
       case "top":
         return `${baseClasses} top-full left-1/2 -translate-x-1/2 -mt-1`;
@@ -137,7 +138,7 @@ export default function Tooltip({
       onBlur={hideTooltip}
     >
       {children}
-      
+
       <AnimatePresence>
         {isVisible && (
           <motion.div
@@ -163,10 +164,10 @@ export default function Tooltip({
 // Utility hook for tooltip
 export function useTooltip() {
   const [isVisible, setIsVisible] = useState(false);
-  
+
   const showTooltip = () => setIsVisible(true);
   const hideTooltip = () => setIsVisible(false);
-  
+
   return {
     isVisible,
     showTooltip,

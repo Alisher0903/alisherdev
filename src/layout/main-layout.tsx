@@ -30,18 +30,20 @@ export default function MainLayout(props: MainLayoutProps) {
     { title: "Home", href: "/" },
     { title: "About", href: "/about" },
     { title: "Projects", href: "/projects" },
-    { title: "Resume", href: "/resume.pdf" },
+    // { title: "Resume", href: "/resume.pdf" },
   ];
 
   return (
     <>
       <SkipNavigation />
-      <div className={classNames(
-        "min-h-screen",
-        inter.variable,
-        playfair.variable,
-        inter.className
-      )}>
+      <div
+        className={classNames(
+          "min-h-screen",
+          inter.variable,
+          playfair.variable,
+          inter.className,
+        )}
+      >
         <Navbar routes={routes} />
         <main id="main-content" tabIndex={-1}>
           {props.children}

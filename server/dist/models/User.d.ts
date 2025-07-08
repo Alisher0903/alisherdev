@@ -1,4 +1,4 @@
-import { Document } from 'mongoose';
+import mongoose, { Document } from 'mongoose';
 export interface IUser extends Document {
     username: string;
     email: string;
@@ -8,6 +8,10 @@ export interface IUser extends Document {
     updatedAt: Date;
     comparePassword(candidatePassword: string): Promise<boolean>;
 }
-declare const _default: any;
+declare const _default: mongoose.Model<IUser, {}, {}, {}, mongoose.Document<unknown, {}, IUser, {}> & IUser & Required<{
+    _id: unknown;
+}> & {
+    __v: number;
+}, any>;
 export default _default;
 //# sourceMappingURL=User.d.ts.map

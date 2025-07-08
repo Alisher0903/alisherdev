@@ -119,13 +119,15 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         name: "Javascript",
         icon: JavascriptSvg,
         level: "Expert" as const,
-        description: "ES6+, Async/Await, DOM manipulation, and modern JS features",
+        description:
+          "ES6+, Async/Await, DOM manipulation, and modern JS features",
       },
       {
         name: "Typescript",
         icon: TypescriptSvg,
         level: "Advanced" as const,
-        description: "Type-safe development with interfaces, generics, and advanced types",
+        description:
+          "Type-safe development with interfaces, generics, and advanced types",
       },
     ],
   },
@@ -136,7 +138,8 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
         name: "React.js",
         icon: ReactjsSvg,
         level: "Expert" as const,
-        description: "Hooks, Context API, Performance optimization, and component patterns",
+        description:
+          "Hooks, Context API, Performance optimization, and component patterns",
       },
       {
         name: "Next.js",

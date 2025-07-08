@@ -25,5 +25,5 @@
     "**/*.tsx",
     "src/data/siteMetaData.mjs"
   ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "admin", "server"]
 }

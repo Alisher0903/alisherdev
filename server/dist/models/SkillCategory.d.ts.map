@@ -1,0 +1,1 @@
+{"version":3,"file":"SkillCategory.d.ts","sourceRoot":"","sources":["../../src/models/SkillCategory.ts"],"names":[],"mappings":"AAAA,OAAO,QAAQ,EAAE,EAAE,QAAQ,EAAU,MAAM,UAAU,CAAA;AAErD,MAAM,WAAW,cAAe,SAAQ,QAAQ;IAC9C,IAAI,EAAE,MAAM,CAAA;IACZ,WAAW,CAAC,EAAE,MAAM,CAAA;IACpB,KAAK,EAAE,MAAM,CAAA;IACb,SAAS,EAAE,IAAI,CAAA;IACf,SAAS,EAAE,IAAI,CAAA;CAChB;;;;;;AA0BD,wBAAmF"}

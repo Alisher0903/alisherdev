@@ -7,7 +7,6 @@
     "dev": "nodemon src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
-    "seed": "node dist/scripts/seed.js",
     "create-admin": "ts-node src/scripts/createAdmin.ts",
     "check-db": "ts-node src/scripts/checkDatabase.ts",
     "reset-db": "ts-node src/scripts/resetDatabase.ts"

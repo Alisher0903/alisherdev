@@ -16,8 +16,6 @@ export default function Document() {
           crossOrigin=""
         />
 
-
-
         {/* Preload critical resources */}
         <link rel="preload" href="/images/heroProfile.png" as="image" />
 

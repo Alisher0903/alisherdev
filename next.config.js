@@ -1,4 +1,5 @@
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
+import createBundleAnalyzer from "@next/bundle-analyzer";
+const withBundleAnalyzer = createBundleAnalyzer({
   enabled: process.env.ANALYZE === "true",
 });
 
@@ -8,7 +9,7 @@ const nextConfig = withBundleAnalyzer({
   reactStrictMode: true,
   pageExtensions: ["ts", "tsx", "js"],
   eslint: {
-    dirs: ["src"],
+    dirs: ["src", "admin", "server"],
   },
   images: {
     domains: ["https://flagcdn.com"],
@@ -25,9 +26,8 @@ const nextConfig = withBundleAnalyzer({
       child_process: false,
       tls: false,
     };
-
     return config;
   },
 });
 
-module.exports = nextConfig;
+export default nextConfig;

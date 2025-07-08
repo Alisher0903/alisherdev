@@ -15,8 +15,6 @@ const createAdmin = async () => {
         const existingAdmin = await User_1.default.findOne({ username: 'admin' });
         if (existingAdmin) {
             console.log('Admin user already exists');
-            console.log('Username:', existingAdmin.username);
-            console.log('Email:', existingAdmin.email);
             process.exit(0);
         }
         // Create admin user
@@ -28,9 +26,6 @@ const createAdmin = async () => {
         });
         await adminUser.save();
         console.log('✅ Admin user created successfully!');
-        console.log('Username:', adminUser.username);
-        console.log('Email:', adminUser.email);
-        console.log('Password:', process.env.ADMIN_PASSWORD || 'admin123');
         process.exit(0);
     }
     catch (error) {

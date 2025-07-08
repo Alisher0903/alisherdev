@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 import User from '../models/User'
 import Project from '../models/Project'
 import Skill from '../models/Skill'
+import Contact from '../models/Contact'
+import SkillCategory from '../models/SkillCategory'
 
 dotenv.config()
 
@@ -15,11 +17,15 @@ const checkDatabase = async () => {
     const userCount = await User.countDocuments()
     const projectCount = await Project.countDocuments()
     const skillCount = await Skill.countDocuments()
+    const contactCount = await Contact.countDocuments()
+    const categoriesCount = await SkillCategory.countDocuments()
 
     console.log('\n📊 Database Statistics:')
     console.log(`Users: ${userCount}`)
     console.log(`Projects: ${projectCount}`)
     console.log(`Skills: ${skillCount}`)
+    console.log(`Contact: ${contactCount}`)
+    console.log(`SkillCategory: ${categoriesCount}`)
 
     // Check admin user
     const adminUser = await User.findOne({ role: 'admin' })

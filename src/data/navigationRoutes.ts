@@ -4,5 +4,5 @@ export const routes: NavbarRoutes = [
   { title: "Home", href: "/" },
   { title: "About", href: "/about" },
   { title: "Projects", href: "/projects" },
-  { title: "Resume", href: "/resume.pdf" },
+  // { title: "Resume", href: "/resume.pdf" },
 ];

@@ -148,8 +148,14 @@ export const MagneticButton: React.FC<{
     if (!buttonRef.current) return;
 
     const button = buttonRef.current;
-    let xTo = gsap.quickTo(button, "x", { duration: 1, ease: "elastic.out(1, 0.3)" });
-    let yTo = gsap.quickTo(button, "y", { duration: 1, ease: "elastic.out(1, 0.3)" });
+    let xTo = gsap.quickTo(button, "x", {
+      duration: 1,
+      ease: "elastic.out(1, 0.3)",
+    });
+    let yTo = gsap.quickTo(button, "y", {
+      duration: 1,
+      ease: "elastic.out(1, 0.3)",
+    });
 
     const handleMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
@@ -206,7 +212,7 @@ export const AnimatedCounter: React.FC<{
           ease: "power2.out",
           onUpdate: () => {
             if (counterRef.current) {
-              counterRef.current.textContent = 
+              counterRef.current.textContent =
                 prefix + Math.round(counter.value) + suffix;
             }
           },
@@ -219,7 +225,11 @@ export const AnimatedCounter: React.FC<{
     };
   }, [endValue, duration, suffix, prefix]);
 
-  return <span ref={counterRef} className={className}>0{suffix}</span>;
+  return (
+    <span ref={counterRef} className={className}>
+      0{suffix}
+    </span>
+  );
 };
 
 // Parallax effect component
