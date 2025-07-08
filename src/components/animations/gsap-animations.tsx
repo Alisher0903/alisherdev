@@ -22,7 +22,7 @@ export const AnimatedTextReveal: React.FC<{
     const chars = text.innerText.split("");
     text.innerHTML = "";
 
-    chars.forEach((char, i) => {
+    chars.forEach((char) => {
       const span = document.createElement("span");
       span.textContent = char === " " ? "\u00A0" : char;
       span.style.display = "inline-block";

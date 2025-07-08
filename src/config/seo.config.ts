@@ -1,5 +1,5 @@
 import { DefaultSeoProps } from "next-seo";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { siteMetadata } from "@/data/siteMetaData";
 
 const defaultSEOConfig: DefaultSeoProps = {
   title: "Alisher Sodiqov | Software Developer",

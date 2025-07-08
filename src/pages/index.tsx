@@ -8,7 +8,7 @@ import ProjectShowcase from "@/components/projects/project-showcase";
 import StructuredData from "@/components/seo/structured-data";
 import { PROJECT_SHOWCASE } from "@/data/projects";
 import { SKILLS_DATA } from "@/data/skills";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { siteMetadata } from "@/data/siteMetaData";
 import {
   portfolioPageSchema,
   professionalServiceSchema,

@@ -1,4 +1,4 @@
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { siteMetadata } from "@/data/siteMetaData";
 
 // Person Schema for Developer Portfolio
 export const personSchema = {

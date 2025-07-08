@@ -5,7 +5,7 @@ import ExperienceShowcaseList from "@/components/experience/experience-showcase-
 import StructuredData from "@/components/seo/structured-data";
 import { EXPERIENCE } from "@/data/experience";
 import { EDUCATION } from "@/data/education";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { siteMetadata } from "@/data/siteMetaData";
 import { aboutPageSchema } from "@/utils/structured-data";
 
 export default function About() {

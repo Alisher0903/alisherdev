@@ -2,8 +2,10 @@ export const siteMetadata = {
   title: "Alisher Sodiqov | Software Developer Portfolio",
   author: "Alisher Sodiqov",
   headerTitle: "Alisher Sodiqov",
-  description: "Experienced Software Developer with 2+ years of expertise in React, Next.js, TypeScript, and modern web technologies. Building scalable, user-friendly applications with clean code and innovative solutions.",
-  shortDescription: "Software Developer specializing in React, Next.js, and modern web technologies",
+  description:
+    "Experienced Software Developer with 2+ years of expertise in React, Next.js, TypeScript, and modern web technologies. Building scalable, user-friendly applications with clean code and innovative solutions.",
+  shortDescription:
+    "Software Developer specializing in React, Next.js, and modern web technologies",
   language: "en-us",
   theme: "dark",
   siteName: "alisherdev.uz",
@@ -45,7 +47,8 @@ export const siteMetadata = {
     "UI/UX",
   ],
   type: "website",
-  robots: "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+  robots:
+    "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
   googleAnalytics: "",
   microsoftClarity: "",
   plausibleAnalytics: "",

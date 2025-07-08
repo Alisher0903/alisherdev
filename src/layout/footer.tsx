@@ -1,6 +1,6 @@
 import ContactButton from "@/components/contact-form/contact-button";
 import { GithubIcon, LinkedinIcon } from "@/components/icons";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { siteMetadata } from "@/data/siteMetaData";
 import { FaTelegram } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 

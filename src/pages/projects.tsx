@@ -3,7 +3,7 @@ import { NextSeo } from "next-seo";
 import ProjectCard from "@/components/projects/project-card";
 import StructuredData from "@/components/seo/structured-data";
 import { PROJECTS_CARD } from "@/data/projects";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+import { siteMetadata } from "@/data/siteMetaData";
 import { projectsPageSchema } from "@/utils/structured-data";
 
 export default function Projects() {
