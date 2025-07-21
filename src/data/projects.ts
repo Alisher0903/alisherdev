@@ -100,8 +100,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     name: "Sfera Academy",
     favicon: "/images/projects/logos/sfera.ico",
     imageUrl: [
-      "/images/projects/sferacard1.webp",
-      "/images/projects/sferacard2.webp",
+      "/images/projects/sfera-web.webp",
+      "/images/projects/sfera-web2.webp",
     ],
     description:
       "SFERA ACADEMY is a website thatprovides complete information about sfera academy, it is a site that providesinformation about courses such asbusiness training, programming courses frontend and backend, computer literacy, systemization.",
@@ -112,8 +112,8 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
     name: "Sfera Academy | Admin",
     favicon: "/images/projects/logos/sfera.ico",
     imageUrl: [
-      "/images/projects/sferacard1.webp",
-      "/images/projects/sferacard2.webp",
+      "/images/projects/sfera-admin.webp",
+      "/images/projects/sfera-admin2.webp",
     ],
     description:
       "SFERA ACADEMY | ADMIN is the admin panel of SFERA ACADEMY that allows managing courses, users, content, and the overall educational system efficiently.",
