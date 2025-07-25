@@ -17,7 +17,7 @@ export default function Document() {
         />
 
         {/* Preload critical resources */}
-        <link rel="preload" href="/images/heroProfile.png" as="image" />
+        <link rel="preload" href="/images/heroProfile.webp" as="image" />
 
         {/* Security and performance meta tags */}
         <meta name="robots" content="index,follow" />
