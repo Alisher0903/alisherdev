@@ -139,7 +139,7 @@ export const PROJECTS_CARD: ProjectCardProps[] = [
   {
     name: "Tunikafon",
     favicon: "/images/projects/logos/tunika.ico",
-    imageUrl: ["/images/projects/tunikafon.webp"],
+    imageUrl: ["/images/projects/tunikafon.webp", "/images/projects/tunikafon1.webp"],
     description:
       "Tunikafon is an admin panel developed to streamline operations in the industry. It helps manage employee tasks, calculate workloads, and track material usage efficiently through a centralized dashboard.",
     sourceCodeHref: "https://github.com/Alisher0903/tunikafon",
