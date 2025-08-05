@@ -1,4 +1,4 @@
-# Portfolio Alisher
+# Portfolio Alisher Sodiqov
 
 This portfolio is crafted using [Next.js](https://nextjs.org/)
 
