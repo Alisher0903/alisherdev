@@ -1,9 +1,8 @@
-import { ReactNode } from "react";
-
 import { Inter, Playfair_Display } from "next/font/google";
 
-import Navbar from "@/layout/navbar";
 import Footer from "@/layout/footer";
+import Navbar from "@/layout/navbar";
+import { ReactNode } from "react";
 import SkipNavigation from "@/components/accessibility/skip-navigation";
 import { classNames } from "@/utility/classNames";
 
@@ -30,7 +29,7 @@ export default function MainLayout(props: MainLayoutProps) {
     { title: "Home", href: "/" },
     { title: "About", href: "/about" },
     { title: "Projects", href: "/projects" },
-    // { title: "Resume", href: "/resume.pdf" },
+    { title: "Resume", href: "/resume" },
   ];
 
   return (
